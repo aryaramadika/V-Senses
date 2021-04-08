@@ -1,0 +1,417 @@
+/* Made with love by Mutiullah Samim*/
+
+@import url('https://fonts.googleapis.com/css?family=Numans');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+
+/* html,body{
+background-size: cover;
+background-repeat: no-repeat;
+height: 100%;
+font-family: 'Numans', sans-serif;
+background-image: linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url(1225023803.jpg);
+} */
+
+.hero{
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(to right, #0044FF, #1BC6FA);
+    background-position: center;
+    background-size: cover;
+    position: absolute;
+    filter: blur(3px);
+}
+
+
+.container{
+height: 100%;
+align-content: center;
+}
+
+#vsenseLogo
+{
+    position: absolute;
+    margin-left: 27rem;
+    margin-top: -3.5rem;
+}
+
+#icon-back
+{
+    position:absolute;
+    margin-left: -100px;
+    margin-top: 280px;
+    
+}
+
+.rec-card
+{
+    height: 525px;
+    margin-top: 180px;
+    margin-bottom: auto;
+    width: 400px;
+    /* background-color: rgba(22, 22, 22, 0.5) !important; */
+    background-color: white;
+    overflow: hidden;
+    border-radius: 20px;
+}
+
+.card{
+height: 450px;
+margin-top: 130px;
+margin-bottom: auto;
+width: 400px;
+/* background-color: rgba(22, 22, 22, 0.5) !important; */
+background-color: white;
+overflow: hidden;
+border-radius: 20px;
+}
+
+.card-header
+{
+    background-color: white;
+    border: none;
+}
+
+/* .social_icon span{
+font-size: 60px;
+margin-left: 10px;
+color: #FFC312;
+}
+
+.social_icon span:hover{
+color: white;
+cursor: pointer;
+} */
+
+/* .card-header h3{
+color: white;
+} */
+
+.regBox{
+    width: 380px;
+    height: 480px;
+    position: absolute;
+    /* margin: 6%;  */
+    margin-left: -14px;
+    margin-top: -20px;
+    background: #fff;
+    padding: 5px;
+    overflow: hidden;
+    border-radius: 20px;
+    /* margin-top: 9rem; */
+}
+
+.Regbutton-box
+{
+    width: 360px;
+    margin: 25px auto;
+    position: relative;
+    box-shadow: 0 0 20px 0px #60B0FE;
+    border-radius: 30px;
+}
+
+.TCRegtoggle-btn
+{
+    padding: 10px 27px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+
+.TRegtoggle-btn
+{
+    padding: 10px 27px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+
+.KSRegtoggle-btn
+{
+    padding: 10px 27px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
+    outline: none;
+    position: relative;
+}
+
+#Regbtn{
+top: 0;
+left: 0;
+position: absolute;
+width: 125px;
+height: 100%;
+background: linear-gradient(to right, #0044FF, #1BC6FA);
+border-radius: 30px;
+transition: .5s;
+}
+
+.TCinput-group
+{
+    top: 140px;
+    position: absolute;
+    width:280px;
+    transition: .5s;
+}
+.Tinput-group
+{
+    top: 90px;
+    position: absolute;
+    width:280px;
+    transition: .5s;
+}
+.KSinput-group
+{
+    top: 110px;
+    position: absolute;
+    width:280px;
+    transition: .5s;
+}
+
+.patientReginput-group
+{
+    top: 90px;
+    position: absolute;
+    width: 350px;
+    transition: .5s;
+}
+
+.input-field
+{
+    width: 100%;
+    padding: 11px 9px;
+    margin: 1px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+
+.input-resultDate
+{
+    width: 100%;
+    padding: 10px 0;
+    margin: 10px 0;
+    margin-top: -30px;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+
+.input-Status 
+{
+    width: 100%;
+    padding: 10px 0;
+    margin: 10px 0;
+    border-left: 0;
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 1px solid #999;
+    outline: none;
+    background: transparent;
+}
+
+.TSsubmit-btn
+{
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    /* margin: auto; */
+    margin-top: 40px; 
+    margin-left: 23px;
+    background: linear-gradient(to right, #0044FF, #1BC6FA);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+
+.Reqsubmit-btn
+{
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    /* margin: auto; */
+    margin-top: 40px; 
+    margin-left: 23px;
+    background: linear-gradient(to right, #0044FF, #1BC6FA);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+#submitpat{
+    margin: 13px 30px;
+    margin-left: 26px;
+}
+.submit-btn
+{
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    margin: 13px 30px;
+    margin-left: 26px;
+    margin-right: -3px;
+    background: linear-gradient(to right, #0044FF, #1BC6FA);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+
+.Record-Patient
+{
+    width: 85%;
+    padding: 10px 30px;
+    cursor: pointer;
+    display: block;
+    /* margin: auto; */
+    margin-top: 17px ;
+    margin-left: 20px;
+    background: linear-gradient(to right, #0044FF, #1BC6FA);
+    border: 0;
+    outline: none;
+    border-radius: 30px;
+}
+
+#typenotif
+{
+    font-size: 10px;
+}
+
+#resultText
+{
+    margin-bottom: 160px;
+}
+
+.resultCheckBox
+{
+    margin: 17px 10px 30px 45px ;
+}
+
+#checkPositive
+{
+    margin-bottom: 159px;
+}
+
+#checkNegative
+{
+    margin-bottom: 159px;
+}
+
+.Tcheck-box
+{
+    margin: 10px 10px 30px 0;
+}
+#TRememberpass
+{
+    margin-bottom: 79px;
+}
+.check-box
+{
+    margin: 30px 10px 30px 0;
+}
+
+span{
+    color: #777;
+    font-size: 12px;
+    bottom: 81px;
+    position: absolute;
+}
+
+#kitcheck
+{
+    color: #777;
+    font-size: 12px;
+    bottom: 71px;
+    position: absolute;
+}
+
+#Test_Centre
+{
+    left: 50px;
+}
+
+#Tester
+{
+    left: 450px;
+}
+
+#Kit_Stock
+{
+    left: 450px;
+}
+
+#orRecord
+{
+    margin-left: 130px;
+    margin-top: 10px;
+    font-weight: 20;
+    font-size:medium;
+}
+
+#reccard
+{
+    left: 0px;
+}
+
+.statsdropbtn {
+    background-color:black;
+    color: white;
+    padding: 6px;
+    margin-top: 15px;
+    font-size: 12px;
+    border: none;
+    cursor: pointer;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .status-dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .stat-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .stat-content a {
+    color: black;
+    padding: 3px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .stat-content a:hover {background-color: #f1f1f1}
+  
+  /* Show the dropdown menu on hover */
+  .status-dropdown:hover .stat-content {
+    display: block;
+  }
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .status-dropdown:hover .statsdropbtn {
+    background-color: #1BC6FA;
+  }

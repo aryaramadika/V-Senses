@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@200;300&display=swap" rel="stylesheet">
+        <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous"> -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="CSS.css">
+        <title>V-Senses - Covid-19 Tracking</title>
+    </head>
+
+    <body>
+        <div class="header">
+            <div class="container">
+                <div class="navbar">
+                    <div class="logo">
+                        <img src="logo/4.png" width="150px">
+                    </div>
+                    <nav>
+                        <ul id="MenuItems">
+                            <li><a href="">Home</a></li>
+                            <li><a href="alden/RegisterType.html">Test Centre</a></li>
+                            <li><a href="alden/RegisterType.html">Tester</a></li>
+                            <li><a href="alden/RegisterType.html">Test Kits Stock</a></li>
+                            <li><a href="">Account</a></li>
+                        </ul>
+                    </nav>
+                    <img src="user/mason.png" width="30px" height="30px">
+                    <img src="image/menu.png" class="menu-icon" onclick="menutoggle()">
+                </div>
+                <div class="row">
+                    <div class="col-2">
+                        <h1>V-Senses!<br>Covid-19 Tracking Live Data</h1>
+                        <p>
+                            It’s going to disappear. One day, it’s like a miracle, it will disappear and let your
+                            medical senses guide you
+                        </p>
+                        <a href="" class="btn">Explore it now.</a>
+                    </div>
+                    <div class="col-2">
+                        <div class="data-container">
+                            <!-- <div class="stats-container">
+                                <h4>Cases</h4>
+                                <h3 id="cases"></h3>
+                                <h4>Deaths</h4>
+                                <h3 id="deaths"></h3>
+                                <h4>% of Deaths</h4>
+                                <h3 id="percent"></h3>
+
+                            </div>
+                            <div class="location-container">
+                                <h4>Country</h4>
+                                <h3 id="country">Indonesia</h3>
+                                <h4>Population</h4>
+                                <h3 id="population"></h3>
+                                <h4>Last Updated</h4>
+                                <h3 id="update"></h3>
+
+                            </div> -->
+
+                            <!-- <img src="logo/Covid-19 19 Maret.jpg"> -->
+                            <table class="table table-dark">
+                                <h2>Patient data</h2>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#id</th>
+                                        <th scope="col">Name </th>
+                                        <th scope="col">Symptomps</th>
+                                        <th scope="col">Status</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr id="data">
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <a href="" class="btn">See More Patient.</a>
+                            <table class="table table-dark">
+                                <h2>Test Centre</h2>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#id</th>
+                                        <th scope="col">Name </th>
+                                        <th scope="col">Address</th>
+                                        <th scope="col">Total Recovers</th>
+                                    </tr>
+                                </thead>
+
+                                <tbody>
+                                    <tr id="data">
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <a href="" class="btn">See More Test Centre.</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="container-recommendation">
+            <ul class="nav sc-fjdhpX ulRecommend">
+                <li class="sc-cSHVUG liRecommend">
+                    <a class="default sc-hMqMXs category" href="/sneakers">SNEAKERS</a>
+                    <a class="isActive sc-hMqMXs category" href="/streetwear">SANDALS</a>
+                    <a class="default sc-hMqMXs category" href="/luxury">THRIFT</a>
+                </li>
+            </ul>
+        </div> -->
+
+            <!-- Featured  Categories -->
+            <div class="categories">
+                <div class="small-container">
+                    <h2 class="title">Covid - 19 Data Statistic</h2>
+                    <div class="row">
+                        <h3 id="date">Date Time</h3>
+                        <!-- <form autocomplete="off">
+                            <input type="text" name="srch" id="srch" required list="countries"
+                                placeholder="Enter a name of Country">
+                            <datalist>
+                                <option value="World">World</option>
+                                <option value="World">World</option>
+                            </datalist>
+                            <button>Search</button>
+                        </form> -->
+                        <h2 id="name-country">Indonesia</h2>
+                        <div class="content">
+                            <div class="box confirmed">
+                                <p>confirmed</p>
+                                <h3>0</h3>
+                                <i class="fa fa-long-arrow-up">0</i>
+                            </div>
+                            <div class="box deaths">
+                                <p>deaths</p>
+                                <h3>0</h3>
+                                <i class="fa fa-long-arrow-up">0</i>
+                            </div>
+                            <div class="box recovered">
+                                <p>recovered</p>
+                                <h3>0</h3>
+                                <i class="fa fa-long-arrow-up">0</i>
+                            </div>
+                        </div>
+                        <div class="chart">
+
+                        </div>
+
+                        <!-- <div class="col-3">
+                            <img src="image/ads1.jpg" height="445px">
+                            <h4>SNEAKERS</h4>
+                        </div>
+                        <div class="col-3">
+                            <img src="image/shirts1.png" height="445px">
+                            <h4>T-SHIRTS</h4>
+                        </div>
+                        <div class="col-3">
+                            <img src="image/denim2.jpg" height="445px">
+                            <h4>OUTERS</h4> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Featured  products -->
+        <div class="small-container">
+            <h2 class="title"></h2>
+            <!-- <div class="row">
+                <div class="col-4">
+                    <img src="product/air-max-90-x-denham-infrared-release-date.jpg">
+                    <h4>Nike Air Max 90 x Denham Infrared</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p>IDR 1.249.000</p>
+                </div>
+                <div class="col-4">
+                    <img src="product/nikestussy.jpg">
+                    <h4>Nike Benassi x Stussy - White </h4>
+                    <div class=" rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+
+                    </div>
+                    <p>IDR 799.000</p>
+
+                </div>
+                <div class="col-4">
+                    <img src="product/nike-x-stussy-apparel-collection-release-date.jpg">
+                    <h4>Nike x Stussy Tee - Green</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+
+                    </div>
+                    <p>IDR 899.000</p>
+
+                </div>
+
+                <div class="col-4">
+                    <img src="product/nike-x-undercover-apparel-collection.jpg">
+                    <h4>Nike x Undercover Hoodie - White</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+
+                    </div>
+                    <p>IDR 899.000</p>
+                </div>
+            </div>
+            <h2 class="title">Latest Products</h2>
+            <div class="row">
+                <div class="col-4">
+                    <img src="product/air-jordan-1-zoom-paris-saint-germain-release-date-.jpg">
+                    <h4>Nike Air Jordan 1 High Zoom x PSG </h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p>IDR 2.249.000</p>
+                </div>
+                <div class="col-4">
+                    <img src="product/sb-dunk-low-pro-chicago-release-date.jpg">
+                    <h4>Nike SB Dunk Low Pro Chicago </h4>
+                    <div class=" rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+
+                    </div>
+                    <p>IDR 5.799.000</p>
+
+                </div>
+                <div class="col-4">
+                    <img src="product/air_jordan_1_la_to_chicago_1609946325_84678de6_progressive.jpg">
+                    <h4>Nike Air Jordan 1 LA To Chicago</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+
+                    </div>
+                    <p>IDR 3.899.000</p>
+
+                </div>
+
+                <div class="col-4">
+                    <img src="product/sb-dunk-low-strangelove-release-date.jpg">
+                    <h4>Nike SB Dunk Low Pro Stangelove</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+
+                    </div>
+                    <p>IDR 2.399.000</p>
+                </div>
+                <div class="col-4">
+                    <img src="product/air-jordan-1-zoom-paris-saint-germain-release-date-.jpg">
+                    <h4>Nike Air Jordan 1 High Zoom x PSG </h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p>IDR 2.249.000</p>
+                </div>
+                <div class="col-4">
+                    <img src="product/sb-dunk-low-pro-chicago-release-date.jpg">
+                    <h4>Nike SB Dunk Low Pro Chicago </h4>
+                    <div class=" rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+
+                    </div>
+                    <p>IDR 5.799.000</p>
+
+                </div>
+                <div class="col-4">
+                    <img src="product/air_jordan_1_la_to_chicago_1609946325_84678de6_progressive.jpg">
+                    <h4>Nike Air Jordan 1 LA To Chicago</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+
+                    </div>
+                    <p>IDR 3.899.000</p>
+
+                </div>
+
+                <div class="col-4">
+                    <img src="product/sb-dunk-low-strangelove-release-date.jpg">
+                    <h4>Nike SB Dunk Low Pro Stangelove</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+
+                    </div>
+                    <p>IDR 2.399.000</p>
+                </div>
+                <div class="col-4">
+                    <img src="product/air-jordan-1-zoom-paris-saint-germain-release-date-.jpg">
+                    <h4>Nike Air Jordan 1 High Zoom x PSG </h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p>IDR 2.249.000</p>
+                </div>
+                <div class="col-4">
+                    <img src="product/sb-dunk-low-pro-chicago-release-date.jpg">
+                    <h4>Nike SB Dunk Low Pro Chicago </h4>
+                    <div class=" rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+
+                    </div>
+                    <p>IDR 5.799.000</p>
+
+                </div>
+                <div class="col-4">
+                    <img src="product/air_jordan_1_la_to_chicago_1609946325_84678de6_progressive.jpg">
+                    <h4>Nike Air Jordan 1 LA To Chicago</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+
+                    </div>
+                    <p>IDR 3.899.000</p>
+
+                </div>
+
+                <div class="col-4">
+                    <img src="product/sb-dunk-low-strangelove-release-date.jpg">
+                    <h4>Nike SB Dunk Low Pro Stangelove</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+
+                    </div>
+                    <p>IDR 2.399.000</p>
+                </div>
+                <div class="col-4">
+                    <img src="product/air-jordan-1-zoom-paris-saint-germain-release-date-.jpg">
+                    <h4>Nike Air Jordan 1 High Zoom x PSG </h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                    </div>
+                    <p>IDR 2.249.000</p>
+                </div>
+                <div class="col-4">
+                    <img src="product/sb-dunk-low-pro-chicago-release-date.jpg">
+                    <h4>Nike SB Dunk Low Pro Chicago </h4>
+                    <div class=" rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+
+                    </div>
+                    <p>IDR 5.799.000</p>
+
+                </div>
+                <div class="col-4">
+                    <img src="product/air_jordan_1_la_to_chicago_1609946325_84678de6_progressive.jpg">
+                    <h4>Nike Air Jordan 1 LA To Chicago</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+
+                    </div>
+                    <p>IDR 3.899.000</p>
+
+                </div>
+
+                <div class="col-4">
+                    <img src="product/sb-dunk-low-strangelove-release-date.jpg">
+                    <h4>Nike SB Dunk Low Pro Stangelove</h4>
+                    <div class="rating">
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+
+                    </div>
+                    <p>IDR 2.399.000</p>
+                </div>
+            </div> -->
+        </div>
+        <!-- Special Offer -->
+        <!-- <div class="offer">
+            <div class="small-container">
+                <div class="row">
+                    <div class="col-2">
+                        <img src="product/air-jordan-1-zoom-paris-saint-germain-release-date--removebg.png" offer-img">
+                    </div>
+                    <div class="col-2">
+                        <p>Exclusively Release on Yutaka!</p>
+                        <h1>Nike Air Jordan 1 High Zoom Air Comfort x Paris-Saint-Germain</h1>
+                        <small>Air Jordan 1 Zoom Air Comfort x Paris Saint-Germain for a sophisticated look. Adding
+                            a
+                            new chapter to the history of iconic silhouettes, this version uses a soft suede with a
+                            microfibre lining and upgraded full-length Zoom cushioning underfoot. Building on a
+                            long-time partnership with Jordan Brand, this colorway features hues and details
+                            inspired by
+                            the historic French FC.⁠</small>
+
+                        <a href="" class="btn">Get It Now!!!</a>
+                    </div>
+                </div>
+            </div>
+        </div> -->
+
+        <!-- testimoni -->
+        <div class="testimonial">
+            <div class="small-container">
+                <div class="row">
+                    <div class="col-3">
+                        <i class="fa fa-quote-left"></i>
+
+                        <p>
+                            Mesut Ozil is my role model. I think our playing styles are similar and that’s why I am
+                            trying to learn as much from his game as I can </p>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                        </div>
+                        <img src="user/p173879.png">
+                        <h3>Kai Havertz</h3>
+                    </div>
+                    <div class="col-3">
+                        <i class="fa fa-quote-left"></i>
+
+                        <p>
+
+                            We have a good mix of everything and he wanted to achieve the targets that we want, to
+                            do
+                            it all together. </p>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star-half-o"></i>
+                        </div>
+                        <img src="user/mason.png">
+                        <h3>Mason Mount</h3>
+
+                    </div>
+                    <div class="col-3">
+                        <i class="fa fa-quote-left"></i>
+
+                        <p>
+                            Tuchel always just trusted me and gave me a chance. Of course he’s given me tips and
+                            feedback with what he sees every day in training and stuff like that, small things</p>
+                        <div class="rating">
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+                            <i class="fa fa-star"></i>
+
+                        </div>
+                        <img src="user/tammy.png"">
+                        <h3>Tammy Abraham</h3>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- brands -->
+        <div class=" brands">
+                        <div class="small-container">
+                            <div class="row">
+                                <div class="col-5">
+                                    <img src="logo/3.png" width="180px" height="90px">
+                                </div>
+                                <!-- <div class="col-5">
+                                    <img src="brands/blueadidas-removebg-preview.png" width="180px" height="110px">
+                                </div>
+                                <div class="col-5">
+                                    <img src="brands/unnamed-removebg-preview.png" width="180px" height="115px">
+                                </div>
+                                <div class="col-5">
+                                    <img src="brands/PUMA-Logo.png" width="180px" height="110px">
+                                </div> -->
+
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <!-- footer  -->
+
+                    <div class="footer">
+                        <div class="container">
+                            <div class="row">
+                                <div class="footer-col-1">
+                                    <h3>Download Our Apps</h3>
+                                    <p>Download app for Android and IOS mobile phone</p>
+                                    <div class="app-logo">
+                                        <img src="image/images/app-store.png" alt="">
+                                        <img src="image/images/play-store.png" alt="">
+
+                                    </div>
+                                </div>
+                                <div class="footer-col-2">
+                                    <img src="logo/4.png">
+                                    <p> Don't be into trends. Don't make fashion own you, but you decide what you
+                                        are,
+                                        what you want to express by the way you dress and the way to live.</p>
+                                </div>
+                                <div class="footer-col-3">
+                                    <h3>Useful Links</h3>
+                                    <ul>
+                                        <li>Promo</li>
+                                        <li>Subscribe Newsletter</li>
+                                        <li>Return Policy</li>
+                                    </ul>
+                                </div>
+                                <div class="footer-col-4">
+                                    <h3>Follow Us</h3>
+                                    <ul>
+                                        <li>Instgram</li>
+                                        <li>Tiktok</li>
+                                        <li>Facebook</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <hr>
+                            <p class="copyright">Copyright 2021 - V-Senses Corporation</p>
+                        </div>
+                    </div>
+
+
+
+    </body>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="js.js">
+        // var MenuItems = document.getElementById("MenuItems");
+        // function menutoggle() {
+        //     if (MenuItems.style.maxHeight == "0px") {
+        //         MenuItems.style.maxHeight = "200px";
+        //         MenuItems.style.marginTop = "35px";
+        //     }
+        //     else {
+        //         MenuItems.style.maxHeight = "0px";
+        //     }
+
+        // }
+
+    </script>
+
+</html>
