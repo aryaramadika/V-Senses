@@ -7,7 +7,7 @@
 </style>
 
 <div class="testimonial" id="testimonial">
-            <div class="small-container">
+            <!-- <div class="small-container">
                 <div class="row">
                     <div class="col-3">
                         <i class="fa fa-quote-left"></i>
@@ -62,7 +62,7 @@
 
                     </div>
 
-                </div>
+                </div> -->
             </div>
         </div>
 
@@ -106,9 +106,8 @@
                                 </div>
                                 <div class="footer-col-2">
                                     <img src="Img/4.png">
-                                    <p> Don't be into trends. Don't make fashion own you, but you decide what you
-                                        are,
-                                        what you want to express by the way you dress and the way to live.</p>
+                                    <p> V-sense Covid Testing Information System is an application that is easy to understand, 
+                                    user-friendly, and provides a fast, safe, precise service to assist the government in tracking covid-19 test results.</p>
                                 </div>
                                 <div class="footer-col-3">
                                     <h3>Useful Links</h3>

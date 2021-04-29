@@ -24,7 +24,7 @@
                     <nav>
                         <ul id="MenuItems">
                             <li><a href="">Home</a></li>
-                            <li><a href="patientLogin.php">Logout</a></li>
+                            <li><a href="indexlanding.php">Logout</a></li>
                             <li><a href="">Account</a></li>
                         </ul>
                     </nav>

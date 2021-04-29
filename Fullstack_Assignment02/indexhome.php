@@ -49,15 +49,101 @@
                                         <th scope="col">#id</th>
                                         <th scope="col">Name </th>
                                         <th scope="col">Symptomps</th>
+                                        <th scope="col">Type</th>
                                         <th scope="col">Status</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr id="data">
+                                        <th>                                        
+                                            <?php
+                                            $sql = "SELECT * FROM patientrecord ;";
+                                            $result = mysqli_query($conn,$sql);
+                                            $resultcheck =  mysqli_num_rows($result);
+
+                                            if($resultcheck > 0){
+                                                while ($row = mysqli_fetch_assoc($result)){
+                                                    echo $row['ID']."<br>"."<br>";
+                                                }
+                                            }
+                                            
+                                            
+                                            ?>
+                                        </th>
+
+                                        <th>
+                                        <?php
+                                            $sql = "SELECT * FROM patientrecord ;";
+                                            $result = mysqli_query($conn,$sql);
+                                            $resultcheck =  mysqli_num_rows($result);
+
+                                            if($resultcheck > 0){
+                                                while ($row = mysqli_fetch_assoc($result)){
+                                                    echo $row['patientName']."<br>"."<br>";
+                                                }
+                                            }
+                                            
+                                            
+                                            ?>
+
+                                        </th>
+
+                                        <th>
+                                        <?php
+                                            $sql = "SELECT * FROM patientrecord ;";
+                                            $result = mysqli_query($conn,$sql);
+                                            $resultcheck =  mysqli_num_rows($result);
+
+                                            if($resultcheck > 0){
+                                                while ($row = mysqli_fetch_assoc($result)){
+                                                    echo $row['symptoms']."<br>"."<br>";
+                                                }
+                                            }
+                                            
+                                            
+                                            ?>
+
+                                        </th>
+                                        <th>
+                                        <?php
+                                            $sql = "SELECT * FROM patientrecord ;";
+                                            $result = mysqli_query($conn,$sql);
+                                            $resultcheck =  mysqli_num_rows($result);
+
+                                            if($resultcheck > 0){
+                                                while ($row = mysqli_fetch_assoc($result)){
+                                                    echo $row['types']."<br>"."<br>";
+                                                }
+                                            }
+                                            
+                                            
+                                            ?>
+
+                                        </th>
+                                        <th>
+                                        <?php
+                                        $sql = "SELECT * FROM patientrecord ;";
+                                        $result = mysqli_query($conn,$sql);
+                                        $resultcheck =  mysqli_num_rows($result);
+
+                                        if($resultcheck > 0){
+                                            while ($row = mysqli_fetch_assoc($result)){
+                                                echo $row['statusPatient']."<br>"."<br>";
+                                            }
+                                        }
+                                            
+                                            ?>
+                                        </th>
+
+
+
+
+
+
                                     </tr>
                                 </tbody>
                             </table>
-                            <a href="" class="btn">See More Patient.</a>
+                            <a href="viewpatient.php" class="btn">See More Patient.</a>
                             <table class="table table-striped table-dark ">
                                 <h2>Test Centre</h2>
                                 <thead >

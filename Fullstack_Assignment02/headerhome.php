@@ -25,7 +25,9 @@
                         <ul id="MenuItems">
                             <li><a href="">Home</a></li>
                             <li><a href="IndexReg.php">Register</a></li>
-                            <li><a href="index.php">Logout</a></li>
+                            <li><a href="viewkitstock.php">Manage Kit Stock</a></li>
+                            <li><a href="generatereport.php">Generate Test Report</a></li>
+                            <li><a href="indexlanding.php">Logout</a></li>
                         </ul>
                     </nav>
                     <!-- <img src="Img/users.png" width="30px" height="30px" class="usersIMG"> -->

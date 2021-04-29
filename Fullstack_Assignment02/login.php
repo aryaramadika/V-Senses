@@ -21,7 +21,8 @@ include_once 'header.php'
             <input type="checkbox" class="check-box"><span>Remember Password</span>
             <button type="submit" class="submit-btn" name ="submit">Login</button>
             </div>
-            <?php
+
+<?php
 
 if(isset($_GET["error"])){
  if($_GET["error"] == "emptyinput"){

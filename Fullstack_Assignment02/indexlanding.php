@@ -15,8 +15,8 @@
                     <div class="col-2">
                         <h1>Welcome to <br> V-Senses!<br>Covid-19 Tracking Live Data</h1>
                         <p>
-                            It’s going to disappear. One day, it’s like a miracle, it will disappear and let your
-                            medical senses guide you
+                        V-sense Covid Testing Information System is an application that is easy to understand, 
+                        user-friendly, and provides a fast, safe, precise service to assist the government in tracking covid-19 test results.
                         </p>
                         <a href="index.php" class="btn">Login/Register as Test Centre Manager</a>
                     </div>
@@ -45,16 +45,14 @@
                             <table class="table table-dark">
                                 <h2>Login as patient</h2>
                                     <p>
-                                        It’s going to disappear. One day, it’s like a miracle, it will disappear and let your
-                                        medical senses guide you
+                                    Log in as a patient to find out your personal history of the covid-19 test results.
                                     </p>
 
                             <a href="indexPatientLogin.php" class="btn" >Click To Login as patient</a>
                             <table class="table table-striped table-dark ">
                                 <h2>Login as Tester</h2>
                                     <p>
-                                        It’s going to disappear. One day, it’s like a miracle, it will disappear and let your
-                                        medical senses guide you
+                                    Log in as an Tester to be able to record a new test or a new patient
                                     </p>
 
                             </table>

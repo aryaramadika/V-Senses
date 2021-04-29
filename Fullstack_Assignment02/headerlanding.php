@@ -25,7 +25,6 @@
                         <ul id="MenuItems">
                             <li><a href="#home">Home</a></li>
                             <li><a href="#covid">Covid-19 Information</a></li>
-                            <li><a href="#testimonial">Testimonial</a></li>
                             <li><a href="#footer">About</a></li>
                         </ul>
                     </nav>

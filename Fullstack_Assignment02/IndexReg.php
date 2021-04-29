@@ -3,8 +3,6 @@
  include_once 'testCentreReg.php';
  include_once 'TesterReg.php';
  include_once 'KSreg.php';
-
-
 ?>
                 
                 

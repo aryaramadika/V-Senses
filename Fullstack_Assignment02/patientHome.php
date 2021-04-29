@@ -1,15 +1,20 @@
-<php
+
 <?php
  include_once 'headerhomepatient.php';
- 
-
- 
 ?>
+
 
 
 
 <!DOCTYPE html>
 <html lang="en">
+    <style>
+        ::placeholder
+{
+    color: whitesmoke;
+    opacity: 1;
+}
+    </style>
 
                 <div class="row">
                     <div class="col-2">
@@ -22,6 +27,78 @@
                     </div>
                     <div class="col-2">
                         <div class="data-container">
+                        
+                        <table class="table table-dark">
+                                <h2>Your Data</h2>
+                                <form action="" method="POST">
+                            <input type="text" class="btn" name="patientUsername" placeholder="Enter Username">
+                            <input type="submit" class="btn" name = "search" value="Search">
+                        </form>
+                                <thead>
+                                    <tr>
+                                        <th scope="col">#id</th>
+                                        <th scope="col">Name </th>
+                                        <th scope="col">Username </th>
+                                        <th scope="col">Symptomps</th>
+                                        <th scope="col">Type</th>
+                                        <th scope="col">Status</th>
+                                    </tr> 
+                                </thead>
+                                <?php
+                                $connection = mysqli_connect("localhost", "root", "", "fullstack_assignment02");
+                                if(!$connection)
+                                    {
+                                        die("connection failed: ". mysqli_connect_error());
+                                    }
+
+                                if(isset($_POST['search']))
+                                {
+                                    $Pusername = $_POST['patientUsername'];
+                                    $query = "SELECT * FROM patientrecord WHERE patientUsername = '$Pusername' ";
+                                    $query_run = mysqli_query($connection, $query);
+                                    if (!$query_run) {
+                                        printf("Error: %s\n", mysqli_error($connection));
+                                        exit();
+                                    }
+                                    while($row = mysqli_fetch_array($query_run))
+                                    {
+                                        ?>
+                                        
+                                    <tr>
+                                                                               
+                                            <td><?php echo $row['ID']; ?></td>
+                                            
+                                       
+
+                                        
+                                        <td><?php echo $row['patientName']; ?></td>
+                                            
+
+                                        
+
+                                        
+                                        <td><?php echo $row['patientUsername']; ?></td>
+                                            
+
+                                        
+                                        <td><?php echo $row['symptoms']; ?></td>
+                                         
+
+                                        
+                                        <td><?php echo $row['types']; ?></td>
+                                        <td><?php echo $row['statusPatient']; ?></td>
+                                        
+
+                                    </tr>
+                                
+                                        <?php
+                                    }
+                                
+                                }
+                                ?>
+                                
+                                
+                            </table>
                             <!-- <div class="stats-container">
                                 <h4>Cases</h4>
                                 <h3 id="cases"></h3>
@@ -42,22 +119,8 @@
                             </div> -->
 
                             <!-- <img src="logo/Covid-19 19 Maret.jpg"> -->
-                            <table class="table table-dark">
-                                <h2>Your data</h2>
-                                <thead>
-                                    <tr>
-                                        <th scope="col">#id</th>
-                                        <th scope="col">Name </th>
-                                        <th scope="col">Symptomps</th>
-                                        <th scope="col">Status</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr id="data">
-                                    </tr>
-                                </tbody>
-                            </table>
-                            <a href="" class="btn">See More Your Data.</a>
+                            
+                            
                         </div>
                     </div>
                 </div>

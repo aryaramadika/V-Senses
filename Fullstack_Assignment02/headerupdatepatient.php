@@ -32,5 +32,5 @@
 	<div class="d-flex justify-content-center h-100">
 		<div class="card" style="margin-top: 130px; height: 430px;">
 			<div class="card-header">
-                            <h3 id="patientText" style="margin-bottom: -0.5rem;">Record Patient</h3>
+                            <h3 id="patientText" style="margin-bottom: -0.5rem;">Update Patient</h3>
                         </div>

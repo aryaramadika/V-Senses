@@ -2,7 +2,7 @@
  include_once 'headerPatient.php';
  include_once 'registerPatient.php';
 ?>
-                
+        
                 
 			</div>
 			<!-- <div class="card-footer">

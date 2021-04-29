@@ -23,9 +23,10 @@
                     </div>
                     <nav>
                         <ul id="MenuItems">
-                            <li><a href="">Home</a></li>
+                            <li><a href="testerHome.php">Home</a></li>
                             <li><a href="IndexPatient.php">Record Patient</a></li>
-                            <li><a href="testerLogin.php">Logout</a></li>
+                            <li><a href="updatepatient.php">Update Test Result</a></li>
+                            <li><a href="indexlanding.php">Logout</a></li>
                         </ul>
                     </nav>
                     <!-- <img src="Img/users.png" width="30px" height="30px" class="usersIMG"> -->
